@@ -1,7 +1,9 @@
 {
-    "routes": [
+   
+    "rewrites": [
         {
-            "handle": "filesystem"
+          "source": "/book/text2speech",
+          "destination": "/api/ra"
         }
-    ]
+      ]
 }

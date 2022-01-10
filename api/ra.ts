@@ -24,10 +24,18 @@ module.exports = async (request: VercelRequest, response: VercelResponse) => {
         if (!FORMAT_CONTENT_TYPE.has(format)) {
             throw `Invalid format ${format}`;
         }
-        let ssml = request.body;
-        if (ssml == null) {
-            throw `Invalid ssml: ${ssml}`;
+         let txt = request.query['text']
+       // let txt = request.body;
+        if (txt == null) {
+            throw `Invalid text: ${txt}`;
         }
+
+        //zh-CN-XiaoxiaoNeural
+        let ssml =`<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="en-US">
+        <voice name="zh-CN-XiaoyouNeural"> 
+          ${txt}
+        </voice>
+      </speak>`
         let result = await convert(ssml, format);
         response.sendDate = true;
         response.status(200)
