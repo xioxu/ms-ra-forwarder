@@ -4,6 +4,10 @@
         {
           "source": "/book/text2speech",
           "destination": "/api/ra"
+        },
+        {
+          "source": "/text2speech",
+          "destination": "/api/ra"
         }
       ]
 }
