@@ -11,7 +11,7 @@ function getLangs(){
        var arr = defaultLangs.split("##");
        arr.forEach(x=>{
            var itemArr = x.split(",");
-           langs_dict[itemArr[0]] = itemArr[1];
+           langs_dict[itemArr[0].toLowerCase()] = itemArr[1];
        });
    }
 
@@ -46,7 +46,9 @@ module.exports = async (request: VercelRequest, response: VercelResponse) => {
         let lang = request.query['text'];
 
         if(lang == null){
-            lang = "en-US";
+            lang = "en-us";
+        }else{
+           lang = lang.toLowerCase();
         }
 
         if (txt == null) {
