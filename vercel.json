@@ -8,6 +8,10 @@
         {
           "source": "/text2speech",
           "destination": "/api/ra"
+        },
+        {
+          "source": "/api/delay",
+          "destination": "/api/ra"
         }
       ]
 }
