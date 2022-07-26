@@ -109,7 +109,7 @@ export function convert(ssml: string, format: string) {
             console.log('ws response status', response.statusCode, response.statusMessage);
         });
 
-        const connectionId = randomBytes(16).toString('hex').toLowerCase()
+        const connectionId = randomBytes(16).toString('hex')
         ws.connect('wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=6A5AA1D4EAFF4E9FB37E23D68491D6F4&ConnectionId='+connectionId);
     });
 
