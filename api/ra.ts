@@ -35,7 +35,7 @@ module.exports = async (request: VercelRequest, response: VercelResponse) => {
 
     try {
 
-        let format = request.headers['format'] || 'audio-16khz-32kbitrate-mono-mp3';
+        let format = request.headers['format'] || 'audio-24khz-48kbitrate-mono-mp3';
         if (Array.isArray(format)) {
             throw `Invalid format ${format}`;
         }
