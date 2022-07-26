@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 import { client as WebSocketClient } from "websocket";
-
+import { service, FORMAT_CONTENT_TYPE } from '../service/edge'
 
 export const FORMAT_CONTENT_TYPE = new Map([
     ['raw-16khz-16bit-mono-pcm', 'audio/basic'],
@@ -35,8 +35,14 @@ export const FORMAT_CONTENT_TYPE = new Map([
 
 ])
 
+export  function convert(ssml: string, format: string) {
+    return new Promise(async (resolve, reject) => {
+        let result = await service.convert(ssml, format)
+        resolve(result);
+    });
+}
 
-export function convert(ssml: string, format: string) {
+export function convert2(ssml: string, format: string) {
     return new Promise((resolve, reject) => {
         let buffers: Array<Buffer> = [];
         let ws = new WebSocketClient();
