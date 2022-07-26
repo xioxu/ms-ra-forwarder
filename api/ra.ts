@@ -50,7 +50,7 @@ module.exports = async (request: VercelRequest, response: VercelResponse) => {
         if(lang == null){
             lang = "en-us";
         }else{
-         //   lang = lang.toLowerCase();
+            lang = lang.toLowerCase();
         }
 
   
