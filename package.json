@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/websocket": "^1.0.4",
     "express": "^4.18.1",
+    "ws": "^8.8.0",
     "websocket": "^1.0.34"
   },
   "author": "Conor",
