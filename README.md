@@ -1,5 +1,7 @@
 # ms-ra-forwarder
 
+参考网站https://toolb.cn/textspeech
+https://github.com/wxxxcxx/ms-ra-forwarder
 ```
 POST /api/ra HTTP/1.1
 FORMAT: audio-16khz-128kbitrate-mono-mp3
