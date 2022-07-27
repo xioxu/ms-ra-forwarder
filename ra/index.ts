@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 import { client as WebSocketClient } from "websocket";
-import { service } from '../service/edge'
+import { service } from '../service/azure'
 
 export const FORMAT_CONTENT_TYPE = new Map([
     ['raw-16khz-16bit-mono-pcm', 'audio/basic'],
